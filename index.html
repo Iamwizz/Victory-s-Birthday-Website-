@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Birthday Celebration</title>
+    <style>
+        body {
+            background: url('https://i.pinimg.com/736x/8b/3a/25/8b3a2540d36a855a9074662a7672a935.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: #fff;
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-top: 20px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+        }
+
+        .name {
+            font-size: 2.5rem;
+            color: red;
+            font-family: 'Cursive', serif;
+            font-style: italic;
+            margin: 10px 0;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+            letter-spacing: 2px;
+        }
+
+        .photo-section {
+            margin: 20px;
+            border: 2px solid #fff;
+            border-radius: 10px;
+            padding: 10px;
+            background-color: rgba(255, 0, 0, 0.5);
+            transition: transform 0.3s;
+        }
+
+        .photo-section:hover {
+            transform: scale(1.05);
+        }
+
+        .profile-image {
+            width: 200px;
+            height: auto;
+            border-radius: 10px;
+            margin-bottom: 10px;
+            transition: transform 0.3s;
+        }
+
+        .profile-image:hover {
+            transform: scale(1.1);
+        }
+
+        fieldset {
+            border: 2px solid #fff;
+            border-radius: 10px;
+            padding: 10px;
+            background-color: rgba(255, 255, 255, 0.8);
+        }
+
+        .quote {
+            font-size: 1.5rem;
+            margin: 20px;
+            font-weight: bold;
+            color: #ffcccb;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+        }
+
+        .birthday-message {
+            font-size: 1.2rem;
+            color: red;
+            margin: 20px;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+        }
+
+        /* Balloon CSS */
+        .balloon {
+            position: absolute;
+            bottom: -150px;
+            width: 100px;
+            height: 150px;
+            background-color: red;
+            border-radius: 50%;
+            opacity: 0.7;
+            animation: floatUp 5s ease-in-out;
+        }
+
+        .balloon:nth-child(2) {
+            left: 20%;
+            background-color: blue;
+        }
+
+        .balloon:nth-child(3) {
+            left: 40%;
+            background-color: green;
+        }
+
+        .balloon:nth-child(4) {
+            left: 60%;
+            background-color: purple;
+        }
+
+        .balloon:nth-child(5) {
+            left: 80%;
+            background-color: yellow;
+        }
+
+        @keyframes floatUp {
+            0% {
+                transform: translateY(0);
+            }
+            100% {
+                transform: translateY(-1000px);
+            }
+        }
+
+        .hidden {
+            display: none;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="content">
+        <h1>HAPPY BIRTHDAY TO THE MOST BEAUTIFUL WOMAN IN THE WORLD!</h1>
+        <div class="name">Oluebube Victory John</div> <!-- Her name in red for clear visibility -->
+        
+        <div class="birthday-message">
+            Today we celebrate you—a gift to everyone, bringing light and love into our lives. Your warmth and kindness make the world a better place!
+        </div>
+
+        <div class="photo-section">
+            <img src="https://www.dropbox.com/scl/fi/hfmq6qq0anmgangiz9rr4/IMG-20241019-WA0057.jpg?rlkey=04n2aiesxlwctflu1m1y00eyi&st=u2xdq0fu&dl=1" alt="Your Girlfriend" class="profile-image">
+            <fieldset>
+                <legend>Babatunde's Message 1</legend>
+                <p>My prayer is that you get everything you want and more. You deserve it all. Happy birthday, love!</p>
+                <button onclick="alert('I love you!')">Show Love</button>
+            </fieldset>
+        </div>
+
+        <div class="photo-section">
+            <img src="https://www.dropbox.com/scl/fi/xm5gg984dpdurouy3j2ew/IMG-20241016-WA0066.jpg?rlkey=j3ifi5rx9d2erag841h3qxcxw&st=ksll29ht&dl=1" alt="Your Girlfriend" class="profile-image">
+            <fieldset>
+                <legend>Babatunde's Message 2</legend>
+                <p>I wanted to wish you the very best on your birthday, but you already have me!</p>
+                <button onclick="alert('Forever and always!')">Show Love</button>
+            </fieldset>
+        </div>
+
+        <div class="photo-section">
+            <img src="https://www.dropbox.com/scl/fi/02ok0pdk52eol956dpcxy/IMG-20240915-WA0001.jpg?rlkey=jq6inph6b9hpiyqictii1tz0f&st=12cpagyu&dl=1" alt="Your Girlfriend" class="profile-image">
+            <fieldset>
+                <legend>Babatunde's Message 3</legend>
+                <p>Celebrating you today and always, no matter the distance. Happy birthday!</p>
+                <button onclick="alert('You mean the world to me!')">Show Love</button>
+            </fieldset>
+        </div>
+
+        <div class="quote">
+            <p id="quote">"You are my today and all of my tomorrows."</p>
+        </div>
+    </div>
+
+    <!-- Balloons animation -->
+    <div id="balloons">
+        <div class="balloon"></div>
+        <div class="balloon"></div>
+        <div class="balloon"></div>
+        <div class="balloon"></div>
+        <div class="balloon"></div>
+    </div>
+
+    <script>
+        // Hide balloons after 5 seconds
+        setTimeout(() => {
+            document.getElementById('balloons').classList.add('hidden');
+        }, 5000);
+
+        // Rotating Quotes
+        const quotes = [
+            "You are my today and all of my tomorrows.",
+            "I love you not only for what you are, but for what I am when I am with you.",
+            "You are my sun, my moon, and all my stars.",
+            "In a sea of people, my eyes will always search for you.",
+            "You are the peanut butter to my jelly.",
+            "Every love story is beautiful, but ours is my favorite.",
+            "I never knew I could love someone so deeply until you walked into my life.",
+            "You are my greatest adventure.",
+            "You are the piece of my heart that I didn’t know was missing.",
+            "With you, I have found the one I can’t live without.",
+            "If I had a flower for every time I thought of you, I could walk through my garden forever.",
+            "You make my heart smile.",
+            "Together is my favorite place to be.",
+            "You are my happy place.",
+            "I knew I loved you before I met you.",
+            "Your smile is my favorite thing in the world.",
+            "When I’m with you, I feel at home.",
+            "You are the love of my life and my best friend.",
+            "Every day spent with you is my new favorite day.",
+            "You are my everything and more."
+        ];
+
+        setInterval(() => {
+            const randomIndex = Math.floor(Math.random() * quotes.length);
+            document.getElementById('quote').textContent = quotes[randomIndex];
+        }, 5000);
+
+        // Scroll animation for photo sections
+        const photoSections = document.querySelectorAll('.photo-section');
+        window.addEventListener('scroll', () => {
+            photoSections.forEach(section => {
+                const sectionPosition = section.getBoundingClientRect().top;
+                const screenPosition = window.innerHeight / 1.3;
+
+                if (sectionPosition < screenPosition) {
+                    section.classList.add('active');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
